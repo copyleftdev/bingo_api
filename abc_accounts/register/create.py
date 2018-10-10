@@ -4,11 +4,8 @@ import requests
 def create(Generator):
     with requests.Session() as s:
         Generator.set_env(s)
-        print("Subscribing...")
         Generator.subscribe()
-        print("Onboarding...")
         Generator.onboard()
-        print("Completing registration...")
         Generator.complete()
         return Generator.account
 
