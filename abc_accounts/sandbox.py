@@ -3,6 +3,7 @@ import register
 import unittest
 import json
 import requests
+import time
 
 
 class OnboardingAPITest(unittest.TestCase):
@@ -14,9 +15,11 @@ class OnboardingAPITest(unittest.TestCase):
         self.parent = Account(host=self.domain)
         self.parent.add_child("Student 1", 2, "M")
         self.parent.add_child("Student 2", 7, "F")
+        time.sleep(10)
         register.new('parent', self.parent)
         self.user_name = self.parent.email
         self.password = self.parent.password
+
 
     def test_end_end_account_creation_paytech(self):
         creds = [self.user_name, self.password]
