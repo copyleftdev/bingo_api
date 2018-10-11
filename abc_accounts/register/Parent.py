@@ -71,8 +71,6 @@ class Parent(AccountCreator):
             "gender": gender,
             "level": level,
             "teacher": 5,
-            "dob_month": 2,
-            "dob_year": 2017,
             "child_relation": 11,
 
         }]
